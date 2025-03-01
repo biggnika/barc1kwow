@@ -1,1 +1,0 @@
-alert('push OK, if you want to sleep');
