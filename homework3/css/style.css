@@ -1,0 +1,40 @@
+.text1 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    font-style: italic;
+}
+
+.text2 {
+    font-family: 'Arial' serif;
+    line-height: 20px;
+    text-decoration: line-through;
+}
+
+.text3{
+    text-transform: uppercase; 
+    text-align: center;
+    text-indent: 10px;
+    
+}
+
+.text4{
+    text-decoration: overline wavy black;
+    text-shadow: 1px 2px 2px #d196e9;
+    word-spacing: 30px;
+    
+}
+
+.t5{
+    text-decoration: underline double black;
+    letter-spacing: 5px;
+}
+
+.t6{
+    text-decoration: underline dotted black;
+    text-decoration: line-through dashed black ;
+    text-align: center;
+    text-transform: capitalize;
+    
+}
