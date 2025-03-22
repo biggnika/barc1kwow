@@ -1,0 +1,38 @@
+body {
+    background-color: #242424;
+    box-sizing: border-box;
+}
+
+.text {
+    font-size: 32px;
+}
+
+.text-element {
+    font-size: 200%;
+    color: white;
+}
+
+.rectangle {
+    max-width: 47vw;
+    max-height: 100px;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 30px;
+    position: fixed;
+    left: 50%;
+    bottom: 100px;
+    
+}
+
+.ball{
+    max-width: 100px;
+    max-height: 100px;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    border-radius: 100%;
+    position: absolute;
+    left: 8%;
+    bottom: 50px;
+}
