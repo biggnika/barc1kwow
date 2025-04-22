@@ -1,0 +1,206 @@
+:root {
+    --general-text: #312C27;
+    --accent-text: #1F1711;
+    --general-bg: #FFf9f4;
+    --accent-bg: #FFE0CB;
+    --accent-color: #FFA55C;
+    --accent-color-2: #CEAAD0;
+    --input-color: #AC907A;
+    --second-family: "Gabriola", sans-serif;
+    --transition: all .4s;
+    --border-radius: 20px;
+
+}
+
+.body {
+    font-family: "Montserrat", "Arial", sans-serif;
+    line-height: 1.5;
+    color: var(--general-text);
+    background: var(--general-bg);
+}
+
+.body--opened-menu {
+    overflow: hidden;
+}
+
+.body--opened-modal {
+    overflow: hidden;
+
+}
+
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+.main-about {
+    padding: 140px 0px;
+}
+
+.main-program,
+.main_gallery,
+.main_testimonials {
+    padding-bottom: 145px;
+}
+
+
+.container {
+    max-width: 1310px;
+    /*из за падинга +30 */
+    margin: 0 auto;
+    padding: 0 15px;
+    height: 100%;
+}
+
+.title {
+    font-size: 74px;
+    line-height: 0.82;
+    font-family: var(--second-family);
+    color: var(--accent-text);
+}
+
+.button {
+    width: 100%;
+    line-height: 1.6;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: var(--accent-color);
+    border-radius: 100px;
+    display: flex;
+    padding: 3px 15px;
+    height: 62px;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.button:hover {
+    background: #ff9138;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    background: #00000070;
+    padding: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: all .6s;
+}
+
+.body--opened-modal .modal {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+.modal-window {
+    position: relative;
+    background: var(--general-bg);
+    border-radius: var(--border-radius);
+    padding: 0px 60px 60px;
+
+    max-width: 428px;
+}
+
+.modal-cancel {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+}
+
+.modal-cancel path {
+    transition: var(--transition);
+}
+
+.modal-cancel:hover path,
+.modal-cancel:hover rect {
+    stroke: var(--input-color);
+}
+
+.modal-img {
+    margin: -65px 0px 15px 13px;
+    max-width: 100%;
+}
+
+.modal-title {
+    font-family: var(--second-family);
+    font-size: 42px;
+    line-height: .9;
+    color: var(--accent-text);
+    margin-bottom: 10px;
+
+}
+
+.modal-text {
+    margin-bottom: 30px;
+}
+
+.modal-form-label {
+    margin-bottom: 10px;
+}
+
+.field {
+    position: relative;
+    display: block;
+}
+
+.field span {
+    position: absolute;
+    top: 12px;
+    left: 28px;
+    font-size: 11px;
+    color: var(--input-color);
+
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+}
+
+.field-input {
+    display: block;
+    width: 100%;
+    background: #00000000;
+    border: 1px solid var(--input-color);
+    border-radius: 100px;
+    padding: 19px 41px 19px 28px;
+    font-size: 16px;
+    transition: var(--transition);
+}
+
+.field-input:hover {
+    border-color: var(--accent-color);
+}
+
+.field-input::placeholder {
+    color: var(--input-color);
+    transition: var(--transition);
+}
+
+.field-input:hover::placeholder {
+    color: var(--accent-color);
+}
+
+.field-input:focus {
+    padding: 26px 41px 12px 28px;
+}
+
+.field-input:focus+span {
+    opacity: 1;
+    visibility: visible;
+}
