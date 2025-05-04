@@ -1,0 +1,114 @@
+@import "fonts.css";
+@import "reset.css";
+@import "header.css";
+@import "footer.css";
+
+:root {
+    --font-family: "Inter", sans-serif;
+    --second-family: "Readex Pro", sans-serif;
+    --accent-bg: #DCE5E2;
+    --transition: .4s;
+}
+
+
+.body {
+    font-family: "Readex Pro", "Arial", sans-serif;
+    line-height: 1.2;
+}
+
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+.main_categories {
+    padding-bottom: 78px;
+}
+
+.main_title {
+    font-family: var(--second-family);
+    font-size: 42px;
+    line-height: 1.25;
+    text-align: center;
+}
+
+.container {
+    max-width: 1513px;
+    margin: 0 auto;
+    padding: 0 73px;
+    height: 100%;
+}
+
+.button {
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 100px;
+    padding: 14px 53px;
+
+    transition: var(--transition);
+}
+
+/* ================================================================== */
+
+
+.burger-icon {
+    display: none;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 18px;
+    padding-bottom: 5px;
+    z-index: 11;
+}
+
+.burger-icon span,
+.burger-icon span::after,
+.burger-icon span::before {
+    display: block;
+    width: 30px;
+    height: 3px;
+    border-radius: 100px;
+    background: black;
+}
+
+.burger-icon span {
+    position: relative;
+}
+
+.burger-icon span::after,
+.burger-icon span::before {
+    content: '';
+    position: absolute;
+    transition: var(--transition);
+}
+
+.burger-icon span::before {
+    top: -8px;
+}
+
+.burger-icon span::after {
+    bottom: -8px;
+}
+
+
+.body--opened-menu .burger-icon span {
+    background: transparent;
+}
+
+.body--opened-menu .burger-icon span::before {
+    top: 0px;
+    transform: rotate(45deg);
+}
+
+.body--opened-menu .burger-icon span::after {
+    bottom: 0px;
+    transform: rotate(-45deg);
+}
